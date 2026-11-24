@@ -1,4 +1,6 @@
 # Text Scale Toggler Requirements
+> [!NOTE]
+> All imformation in this document applies to a potential version 1.0 of this app. Requirements for later versions may be in separate documents, or may replace the contents of this one.
 
 ### Initial Requirements
 * Must be fully backwards-compatible with the existing (command-line-based) version.
@@ -108,9 +110,10 @@
 
 ### Use Cases
 > [!NOTE]
+> All use cases and user stories have been transferred to issues in the issue tracker at <https://github.com/users/testmaster217/projects/6/views/1>.
+> 
 > "Participating Actors" sections and use case diagram have been omitted as the product only has one primary user, and this user is the only possible actor.
-
-> [!NOTE]
+> 
 > The "Goals" sections have been replaced with user stories, and new sections for acceptance criteria and tests have been added because I wanted to see if I could combine user stories with use cases.
 
 ##### Toggling Using the GUI
