@@ -82,6 +82,8 @@
   * It might as well be 175% (stored by the app as 175), since that's my preferred value.
 * What if the app needs to reset or update the saved preferred text scale, but it can't write to the file (permission issue, file in use by another program, etc.)?
   * I don't expect this to happen in real life, but if it happens when trying to reset an invlaid value, the program should behave as normal, except that it should not try to reset the file, and the error message should tell the user why it couldn't. If it happens when trying to save the value, an error message should appear explaining what the problem is. Similar behavior to these two should happen in all cases where the program needs to read from/write to the file, but it can't.
+* How will users see what their preferrewd text scale will look like?
+  * I'm almost embarrassed I didn't think of this sooner, but there should be some kind of preview text somewhere on the GUI that shows this. It will be scaled based on the preferred text scale instead of the actual text scale.
 
 ### Revised Requirements
 > [!NOTE]
@@ -103,6 +105,7 @@
 * (H) Must reset saved preferred text scale to a default value (of 175%) if it is discovered to be invalid or missing, if the file where it's stored is missing, or if the section of the file where it's stored is missing, and must tell the user that it has done so. Namely, it must do this when the user toggles with the keyboard shortcut, as well as when the GUI opens.
 * (H) Must automatically save preferred text scale whenever it is changed (and tell the user that it has done so) and must use this saved value when used (unless the user changes it again or specifies a different value via the legacy command line system (which does not change the saved value)).
 * (H) Must display an appropriate error message if unable to function due to file access errors.
+* (H) GUI must show what text at the preferred text scale will look like via some kind of preview text.
 * (M) Must run on whatever versions of Windows are supported by Microsoft.
 * (L) Must run on whatever version(s) of Windows 11 have the most users. (This may not matter due to the simplicity of the program and its interactions with the Windows APIs. Also, I can't seem to find the stats I'm looking for.)
 * (L, Might be out of scope.) Command-line should have the same "--help" and "--version" options that are standard for command-line programs.
